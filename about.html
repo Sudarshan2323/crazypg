@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Cozy PG</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    /* Header Section */
+    .header {
+      background: url('pg-header.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: black;
+    }
+
+    .header p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: 300;
+      color: black;
+    }
+
+    /* Container */
+    .containers {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .about-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .about-section .text {
+      flex: 1;
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+
+    .about-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      background-color: #f4f4f4;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .mission-section h2 {
+      font-size: 26px;
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    .mission-section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Team Section */
+    .team-section {
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 26px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .team-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .team-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 200px;
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .team-card h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-section img {
+        max-width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+      <div class="logo">crazy PG</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="room.html">Rooms</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Header Section -->
+<div class="header">
+  <h1>Welcome to Cozy PG</h1>
+  <p>Your perfect home away from home</p>
+</div>
+
+<!-- Container -->
+<div class="containers">
+
+  <!-- About Section -->
+  <div class="about-section">
+    <img src="./images/hotel.jpg" alt="PG Room Image">
+    <div class="text">
+      <h2>About Us</h2>
+      <p>
+        Cozy PG was founded in 2015 with the mission of providing comfortable and affordable accommodation
+        to students and professionals. Over the years, we have helped thousands of individuals find their home away from home.
+        Our PG rooms are equipped with modern amenities, high-speed Wi-Fi, and 24/7 security, ensuring a safe and welcoming environment.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="mission-section">
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to make your stay comfortable, convenient, and secure. We strive to create a warm and welcoming community where you feel at home.
+      Our team is committed to providing the best possible experience for every resident.
+    </p>
+  </div>
+
+  <!-- Team Section -->
+  <div class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <img src="./images/kitchen.jpg" alt="Team Member 1">
+        <h3>Miss D.Bhasme</h3>
+        <p>Founder & CEO</p>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <img src="./images/kitchen.jpg" alt="Team Member 2">
+        <h3>Sakshi Patil</h3>
+        <p>Operations Manager</p>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <img src="./images/kitchen.jpg" alt="Team Member 3">
+        <h3>Mark Johnson</h3>
+        <p>Customer Support</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

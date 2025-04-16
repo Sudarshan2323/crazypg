@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Room</title>
+    <style>
+        /* General Styling */
+body {
+  font-family:"poppins",sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Form Styling */
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Response Message */
+#response {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: green;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Add Room Details</h2>
+  <form id="roomForm" action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Room Title" required />
+    <textarea name="description" placeholder="Room Description" required></textarea>
+    <input type="number" name="price" placeholder="Price (per night)" required />
+    <input type="text" name="location" placeholder="Location" required />
+    <input type="number" name="capacity" placeholder="Capacity" required />
+    <label>Available From:</label>
+    <input type="date" name="available_from" required />
+    <label>Available To:</label>
+    <input type="date" name="available_to" required />
+    
+    <label>Upload Room Images:</label>
+    <input type="file" name="images[]" multiple required />
+    
+    <button type="submit">Add Room</button>
+  </form>
+  
+  <div id="response"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("roomForm");
+  const responseDiv = document.getElementById("response");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const res = await fetch("upload.php", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await res.json();
+
+    if (result.status === "success") {
+      responseDiv.textContent = "Room added successfully!";
+      responseDiv.style.color = "green";
+      form.reset();
+    } else {
+      responseDiv.textContent = result.message;
+      responseDiv.style.color = "red";
+    }
+  });
+});
+
+</script>
+</body>
+</html>
